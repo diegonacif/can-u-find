@@ -8,6 +8,8 @@ import {
 // import { App } from './App.jsx'
 import { Login } from './components/Login/Login.jsx';
 import { AuthGoogleProvider } from './contexts/AuthGoogleProvider.jsx';
+import { PrivateRoutes } from './PrivateRoutes.jsx';
+import { CreateOrHunt } from './components/CreateOrHunt/CreateOrHunt.jsx';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
@@ -15,6 +17,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
       <AuthGoogleProvider>
         <Routes>
           <Route path={"/"} element={<Login />} />
+          <Route element={<PrivateRoutes />}>
+            <Route index element={<CreateOrHunt />} />
+          </Route>
         </Routes>
       </AuthGoogleProvider>
     </BrowserRouter>
