@@ -1,0 +1,32 @@
+.login-container {
+  display: flex;
+  @include responsive-padding;
+  width: 100vw;
+  height: 100dvh;
+
+  .login-buttons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: fit-content;
+    height: fit-content;
+    border: 1px solid gray;
+    border-radius: 8px;
+    margin: auto auto;
+    padding: 2rem 3rem;
+
+    .button-wrapper {
+      button {
+        width: 14rem;
+        height: 2.5rem;
+        border: 1px solid rgb(56, 56, 182);
+        border-radius: 4px;
+
+      }
+      & + .button-wrapper {
+        margin-top: 1.5rem;
+      }
+    }
+  }
+}
