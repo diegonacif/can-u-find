@@ -1,6 +1,7 @@
-import { useContext } from 'react';
-import '../../App.scss';
+import { useContext, useEffect } from 'react';
 import { AuthGoogleContext } from '../../contexts/AuthGoogleProvider';
+import '../../App.scss';
+import { useNavigate } from 'react-router-dom';
 
 export const Login = () => {
   const { 
@@ -8,7 +9,14 @@ export const Login = () => {
     userCredential,
   } = useContext(AuthGoogleContext);
 
-  console.log(userCredential ? "logged in" : "not logged in");
+  const navigate = useNavigate();
+
+  // Back to main page when logged in
+  useEffect(() => {
+    userCredential ?
+    navigate("/home") :
+    null
+  }, [userCredential]);
 
   return (
     <section className="login-container">

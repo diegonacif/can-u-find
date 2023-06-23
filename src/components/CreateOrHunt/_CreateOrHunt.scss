@@ -1,9 +1,16 @@
 .create-or-hunt-container {
-  @include responsive-padding;
-
-  button {
-    padding: 0.5rem 1rem;
-    border: 1px solid gray;
-    border-radius: 4px;
+  
+  .choice-container {
+    @include responsive-padding;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    height: calc(100vh - 3rem);
+    
+    button {
+      padding: 0.5rem 1rem;
+      border: 1px solid gray;
+      border-radius: 4px;
+    }
   }
 }

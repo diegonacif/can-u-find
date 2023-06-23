@@ -1,0 +1,15 @@
+.header-container {
+  @include responsive-padding;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100vw;
+  height: 3rem;
+  background-color:darkgrey;
+
+  .logout-button {
+    border: 2px solid gray;
+    border-radius: 4px;
+    padding: 0.25rem 0.5rem;
+  }
+}

@@ -5,6 +5,11 @@ import { AuthGoogleContext } from "./contexts/AuthGoogleProvider";
 export const PrivateRoutes = () => {
   const { isLoading, userCredential } = useContext(AuthGoogleContext);
 
+  console.log({
+    isLoading: isLoading,
+    userCredential: userCredential
+  })
+
   if(isLoading) {
     return null;
   } else {

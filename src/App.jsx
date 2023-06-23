@@ -1,8 +1,9 @@
+import { Outlet } from 'react-router-dom'
 import './App.scss'
 
 export const App = () => {
 
   return (
-    <h1>Can u Find</h1>
+    <Outlet />
   )
 }
